@@ -1,0 +1,129 @@
+= Home Computer Homelab Documentation using Red Hat Tech Writing Style Guide Edition
+
+:REBUILT: 10 May 2023
+
+== Introduction
+
+This document is a step-by-step guide on how to set up a home computer homelab using Red Hat Enterprise Linux (RHEL) 8.4. This homelab will consist of a virtualization host that will run multiple virtual machines (VMs) to simulate different network scenarios. The following sections will cover the hardware requirements, RHEL installation, virtualization setup, and VM configuration.
+
+== Prerequisites
+
+* Desktop or Laptop
+* Internet connectivity
+* Red Hat Account
+
+
+== Hardware Requirements
+
+To create a homelab, you will need the following hardware:
+
+* A desktop or laptop computer:: with a multi-core processor, at least 8 GB of RAM, and a large hard drive.
+* A network switch
+* Ethernet cables to connect the computer and the switch.
+
+== RHEL Installation
+
+To install RHEL, follow these steps:
+
+Download the RHEL 8.4 ISO file from the Red Hat Customer Portal.
+
+Create a bootable USB drive using the ISO file. You can use Etcher for a cross platform solution, or You can use the dd command in Linux or use a tool like Rufus in Windows.
+
+Insert the USB drive into your computer and boot from it.
+
+Follow the on-screen instructions to install RHEL. When prompted for the installation type, select "Minimal Install" to reduce the installation size and improve performance.
+
+After the installation is complete, log in as the root user.
+
+== RHEL Subscription Registration
+
+Onced you have logged into the machine you will be at the desktop.
+
+To use _GNOME_ desktop search, on your keyboard click the _Windows/Meta/Super Key._
+
+Once you have clicked on it, you can start typing in the function or app you are looking for.
+
+Alternatively You can click *Activities* located in the top right side on your screen.
+
+In this case we want to type `Register` and we can see Subscription Manager as an option.
+
+You can hit the _Enter_ button on your keyboard or use your mouse to click on it.
+
+You will then use use your _Red Hat_ Account credentials to log register.
+
+This will take a few minutes to pull down the repository access for your subscription.
+
+Once this has finished you will now have the ability to install software and updates.
+
+
+== Virtualization Setup
+
+To set up virtualization, you will use the Kernel-based Virtual Machine (KVM) hypervisor, which is included with RHEL. Follow these steps:
+
+Install the KVM packages using the following command:
+[subs="+quotes"]
+----
+sudo yum install qemu-kvm libvirt virt-install bridge-utils
+----
+
+Start the libvirtd service using the following command:
+[subs="+quotes"]
+----
+sudo systemctl start libvirtd
+----
+
+Enable the libvirtd service to start automatically on boot:
+[subs="+quotes"]
+----
+sudo systemctl enable libvirtd
+----
+
+Verify that the KVM modules are loaded using the following command:
+[subs="+quotes"]
+----
+lsmod | grep kvm
+----
+
+You should see output similar to the following:
+[subs="+quotes"]
+----
+kvm_intel             221184  0
+kvm                   737280  1 kvm_intel
+----
+
+== VM Configuration
+
+To create VMs in your homelab, follow these steps:
+
+Create a bridge network interface using the following command:
+[subs="+quotes"]
+----
+sudo nmcli connection add type bridge ifname br0
+----
+
+Add the physical network interface to the bridge using the following command:
+[subs="+quotes"]
+----
+sudo nmcli connection modify eth0 master br0
+----
+
+Replace eth0 with the name of your physical network interface.
+
+Create a new VM using the following command:
+[subs="+quotes"]
+----
+sudo virt-install \
+--name vm1 \
+--vcpus 2 \
+--memory 4096 \
+--disk size=20 \
+--network bridge=br0 \
+--cdrom /path/to/iso/file.iso \
+--graphics vnc
+----
+
+This will create a new VM named vm1 with 2 vCPUs, 4 GB of RAM, a 20 GB disk, and a bridged network interface connected to the br0 bridge. The VM will boot from the specified ISO file and use VNC for graphics.
+
+== Conclusion
+
+Congratulations! You have successfully set up a home computer homelab using Red Hat Enterprise Linux. You can now create and configure multiple VMs to simulate different network scenarios and test various configurations. Remember to save your configurations and take backups regularly to avoid losing any important data.
