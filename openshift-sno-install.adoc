@@ -6,6 +6,7 @@
 == Introduction
 
 This document is a step-by-step guide on how to set up a home computer homelab using  OPENSHIFT Single Node Installer (SNO). 
+
 This homelab will consist of a OPENSHIFT SNO host that will run a default setup.
 
 == Prerequisites
@@ -24,6 +25,16 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Ethernet cables to connect the computer and the switch.
 
 == Openshift SNO Installation
+
+Step 1. Open your browser and go to console.redhat.com
+Step 2. Click on "Red Hat OpenShift" or In the top menu, click Services, Containers, Create Cluster
+Step 3. Then click on Datacenter middle tab, Under the Assisted Installer and Click Create Cluster
+Step 4. Which will being you to the "Install OpenShift with the Assisted Installer" page
+
+
+
+
+
 
 [NOTE]
 ====
