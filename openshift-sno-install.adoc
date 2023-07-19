@@ -46,6 +46,11 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Check the box Install Logical Volume Manager Storage
 * Click the Next Button
 6. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
+* Click Add Host
+* Provisioning type set to full
+* SSH public key. click the Browse button adn connect grab your public ssh
+* Then click Generate Discovery ISO
+
 
 
 
