@@ -30,8 +30,11 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 == Openshift SNO Installation
 
 1. Open your browser and go to console.redhat.com
+
 2. Click on "Red Hat OpenShift" or In the top menu, click Services, Containers, Create Cluster
+
 3. Then click on Datacenter middle tab, Under the Assisted Installer and Click Create Cluster
+
 4. Which will being you to the "Install OpenShift with the Assisted Installer" page Step 1.
 * Set Your Clustername, In this example I am useing bowcaster.
 * Set your Base Domain, In this example I am using home.arpa. I  am using RFC 8375 https://www.rfc-editor.org/rfc/rfc8375.html
@@ -43,16 +46,19 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Choose for your homelab if you want to use DHCP or Static IP, bridges, bonds
 * uncheck the Encryption of installation disk
 * Click "Next: at the bottom of the page.
+
 5. "Install OpenShift with the Assisted Installer" page Step 2 Operators
 * If you have a beefy cpu and you want to install the Openshift Virtualization Package
 * Keep the Install Multicluster engine
 * Check the box Install Logical Volume Manager Storage
 * Click the Next Button
+
 6. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
 * Click Add Host
 * Provisioning type set to full
 * SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
 * Then click Generate Discovery ISO, This will download an ISO file
+
 7. Burn the Bootable ISO to a USB Drive
 * Plug in a blank usb drive into your machine, then open the disk application
 * On the left side of the window select your USB Thumb Drive
