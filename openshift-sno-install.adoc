@@ -20,7 +20,10 @@ This homelab will consist of a OPENSHIFT SNO host that will run a default setup.
 
 To create a Openshift SNO in you homelab, you will need the following hardware:
 
-* A desktop or laptop computer:: 6vCPU, at least 32 GB of RAM, and 2 Drives, 1 small drive to install Openshift and a large hard drive to use as LVM (Storage)
+* A desktop or laptop computer: 
+** 6vCPU 
+**at least 32 GB of RAM
+** 2 Drives, 1 small drive to install Openshift and a large hard drive to use as LVM (Storage)
 * A network switch
 * Ethernet cables to connect the computer and the switch.
 
@@ -80,67 +83,9 @@ Text for TIP.
 ====
 
 
-== Prerequisites
 
-* The passive voice might be appropriate for a prerequisite that is not completed by the current user. For example, having a configuration enabled by a system admin.
 
-* Avoid using imperative formations.
 
-* Use parallel language when you write prerequisites. For example, if one bullet is a complete sentence, write the other bullets as complete sentences. But one bullet can be passive voice and another active voice.
-
-== Short descriptions / abstract
-
-This description is usually at least 2-3 sentences long, and you can scan it in a few seconds. It exists between the title and the main content, connecting them and providing context and disambiguation.
-
-Follow these guidelines when writing short descriptions:
-
-* Include user intent:
-
-** What users must do. This content is similar to what is in the title but should not just repeat the same information.
-
-** Why users must complete an action. You must build from the information in the title. This content helps users understand why completing an action is important or beneficial to them.
-
-== User-replaced values
-
-A user-replaced value, also known as a replaceable or variable value, is a value that the user must replace with a value that is relevant for their situation. User-replaced values are often found in places such as code blocks, file paths, and commands.
-
-Use descriptive names for user-replaced values and follow this general format: <value_name>.
-
-Ensure that user-replaced values have the following characteristics:
-
-* Surrounded by angle brackets (< >)
-
-* Separated by underscores (_) for multi-word values
-
-* Lowercase, unless the rest of the related text is uppercase or another capitalization scheme
-
-* Italicized
-
-* If the user-replaced value is referencing a value in code or in a command that is normally monospace, also use monospace for the user-replaced value
-
-Create an Ansible inventory file that is named `/_<path>_/inventory/hosts`.
-
-To italicize a user-replaced value in a code block, you must add an attribute to apply text formatting, such as subs="+quotes" or subs="normal", to the attribute list of the code block.
-
-[subs="+quotes"]
-----
-$ oc describe node __<node_name>__
-----
-
-For XML code blocks, see the guidance on user-replaced values for XML.
-
-[source,xml,subs="+quotes"]
-----
-<ipAddress>__${ip_address}__</ipAddress>
-----
-
-Example AsciiDoc: Cross-reference
-For more information about <topic>, see xref:<link>[<link_text>].
-
-Example AsciiDoc: External link
-For more information about <topic>, see link:<link>[<link_text>].
-
-= Glossary
 
 == Terms and Conventions
 
