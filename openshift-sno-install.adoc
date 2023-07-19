@@ -52,5 +52,56 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Click Add Host
 * Provisioning type set to full
 * SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
-* Then click Generate Discovery ISO
+* Then click Generate Discovery ISO, This will download an ISO file
+7. Burn the Bootable ISO to a USB Drive
+* Plug in a blank usb drive into your machine, then open the disk application
+* On the left side of the window select your USB Thumb Drive
+[WARNING]
+====
+Make sure you select the correct drive, because you will be over-writting eveything on it. 
+Look for USB in the name. 
+If it says SSD or NVME you have your OS Drive selected and with erase your OS!
+Double check you are selecting your USB Drive.
+====
+* In the top right corner click the 3 dots (Menu) button
+* Select the "Restore Disk Image"
+* There will be a new window that pops up called Restore Disk Image. 
+** In the Field " Image to Restore, click the box browse to where you downloaded the Discovery ISO in the last step. 
+[TIP]
+====
+Most of the time this is located in your users home folder under "Downloads". 
+====
+** Once it is selected click the open button.
+* In the Restore Disk Image click the "Start Restoring" button
+* It will then ask you again to make sure you have the correct drive selected, triple check and if it is correct, click the "Restore" button
+* You may be prompted to enter your admin password, then it will take a few minutes to burn it to the device.
+* When it is finished, you can then unplug the thumb drive from the machine you flashed it from.
+8. Install Openshift from Discorvery Iso
+* Get your hardware you plan installing OpenShift SNO onto prepaired.
+** Power cable
+** Ethernet pugged in for Networking
+** Keyboard
+** Mouse
+** Monitor/Display
+* Assuming you have your hardware ready and turned off.
+* Next take your Discovery ISO thumb drive and plug it into your machine you will be installing OpenShift onto.
+* Power on your machine, and select the correct button to choose your boot device.
+[TIP]
+====
+Common keys for accessing the Boot Menu are Esc, F2, F10, or F12, depending on the computer or motherboard manufacturer.
+* Framework Laptop Boot Key is F12
+* Lenovo Boot Key is Enter 
+* Beelink mini pc is F7
+* Intel NUC is F10
+====
+* Find your USB Drive listed on the boot options and select to boot to it.
+at this point, it should start to boot into the Discovery ISO.
+9. Back to the Browser with Red Hat Console 
+* After about 5 minutes you should be able to look at your other laptop at Browser that you have the Red Hat Console window up.
+* In the Middle of the Screen there should be a "Waiting for host"
+
+
+
+
+
 
