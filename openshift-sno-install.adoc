@@ -56,6 +56,7 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 7. Burn the Bootable ISO to a USB Drive
 * Plug in a blank usb drive into your machine, then open the disk application
 * On the left side of the window select your USB Thumb Drive
+
 [WARNING]
 ====
 Make sure you select the correct drive, because you will be over-writting eveything on it. 
@@ -63,14 +64,17 @@ Look for USB in the name.
 If it says SSD or NVME you have your OS Drive selected and with erase your OS!
 Double check you are selecting your USB Drive.
 ====
+
 * In the top right corner click the 3 dots (Menu) button
 * Select the "Restore Disk Image"
 * There will be a new window that pops up called Restore Disk Image. 
 ** In the Field " Image to Restore, click the box browse to where you downloaded the Discovery ISO in the last step. 
+
 [TIP]
 ====
 Most of the time this is located in your users home folder under "Downloads". 
 ====
+
 ** Once it is selected click the open button.
 * In the Restore Disk Image click the "Start Restoring" button
 * It will then ask you again to make sure you have the correct drive selected, triple check and if it is correct, click the "Restore" button
