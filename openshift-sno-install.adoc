@@ -54,10 +54,10 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Click the Next Button
 
 6. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
-* Click Add Host
-* Provisioning type set to full
-* SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
-* Then click Generate Discovery ISO, This will download an ISO file
+  6.1 Click Add Host
+  6.2 Provisioning type set to full
+  6.3 SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
+  6.4 Then click Generate Discovery ISO, This will download an ISO file
 
 7. Burn the Bootable ISO to a USB Drive
 * Plug in a blank usb drive into your machine, then open the disk application
