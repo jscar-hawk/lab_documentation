@@ -20,9 +20,9 @@ This homelab will consist of a OPENSHIFT SNO host that will run a default setup.
 
 To create a Openshift SNO in you homelab, you will need the following hardware:
 
-* A desktop or laptop computer: 
+* A desktop or laptop computer
 ** 6vCPU 
-**at least 32 GB of RAM
+** at least 32 GB of RAM
 ** 2 Drives, 1 small drive to install Openshift and a large hard drive to use as LVM (Storage)
 * A network switch
 * Ethernet cables to connect the computer and the switch.
@@ -54,45 +54,3 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * SSH public key. click the Browse button adn connect grab your public ssh
 * Then click Generate Discovery ISO
 
-
-
-
-
-
-
-
-
-[NOTE]
-====
-Text for note.
-====
-
-[IMPORTANT]
-====
-Text for IMPORTANT.
-====
-
-[WARNING]
-====
-Text for WARNING.
-====
-
-[TIP]
-====
-Text for TIP.
-====
-
-
-
-
-
-
-== Terms and Conventions
-
-The following terms and conventions are used throughout this document:
-
-Attribute: A parameter passed to the Asciidoc processor that modifies the behavior or appearance of the output.
-Attribute reference: A reference to an attribute value using the syntax {attribute-name}. This can be used to dynamically insert values into the output.
-Cross-reference: A reference to another part of the same document using the syntax <<anchor>>. The anchor is defined using the [[anchor]] syntax.
-Link: A reference to another document or website using the syntax link:text[title]. The text is the URL or file path, and the title is optional.
-Footnote: A reference to additional information placed at the bottom of a page using the syntax footnote:[text]. The text is the content of the footnote.
