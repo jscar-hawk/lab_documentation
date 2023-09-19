@@ -29,22 +29,22 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 
 == Openshift SNO Installation
 
-1. Open your browser and go to console.redhat.com
+1. Open your browser and go to https://console.redhat.com
 
 2. Click on "Red Hat OpenShift" or In the top menu, click Services, Containers, Create Cluster
 
 3. Then click on Datacenter middle tab, Under the Assisted Installer and Click Create Cluster
 
 4. Which will being you to the "Install OpenShift with the Assisted Installer" page Step 1.
-* Set Your Clustername, In this example I am useing bowcaster.
+* Set Your Cluster name, In this example I am using bowcaster.
 * Set your Base Domain, In this example I am using home.arpa. I  am using RFC 8375 https://www.rfc-editor.org/rfc/rfc8375.html
-* Choose what version of Openshift to install. At the time of writting the current version on openshift is 4.13.4
+* Choose what version of Openshift to install. At the time of writing the current version on openshift is 4.13.4
 * CPU Architecture, I am leaving as the default x86_64
 * Check the box that says "Install single node OpenShift (SNO)"
-* Uncheck Edit pull secrect
-* Incheck Incluse customr manifests
-* Choose for your homelab if you want to use DHCP or Static IP, bridges, bonds
-* uncheck the Encryption of installation disk
+* Uncheck 'Edit pull secret'
+* Check 'Include customer manifests'
+* Choose for your home lab if you want to use DHCP or Static IP, bridges, bonds
+* Uncheck the Encryption of installation disk
 * Click "Next: at the bottom of the page.
 
 5. "Install OpenShift with the Assisted Installer" page Step 2 Operators
@@ -54,14 +54,10 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Click the Next Button
 
 6. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
-
-6.1 Click Add Host
-
-6.2 Provisioning type set to full
-
-6.3 SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
-
-6.4 Then click Generate Discovery ISO, This will download an ISO file
+. Click Add Host
+. Provisioning type set to full
+. SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
+. Then click Generate Discovery ISO, This will download an ISO file
 
 7. Burn the Bootable ISO to a USB Drive
 * Plug in a blank usb drive into your machine, then open the disk application
@@ -69,7 +65,7 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 
 [WARNING]
 ====
-Make sure you select the correct drive, because you will be over-writting eveything on it. 
+Make sure you select the correct drive, because you will be over-writing eveything on it. 
 Look for USB in the name. 
 If it says SSD or NVME you have your OS Drive selected and with erase your OS!
 Double check you are selecting your USB Drive.
@@ -90,8 +86,9 @@ Most of the time this is located in your users home folder under "Downloads".
 * It will then ask you again to make sure you have the correct drive selected, triple check and if it is correct, click the "Restore" button
 * You may be prompted to enter your admin password, then it will take a few minutes to burn it to the device.
 * When it is finished, you can then unplug the thumb drive from the machine you flashed it from.
+
 8. Install Openshift from Discorvery Iso
-* Get your hardware you plan installing OpenShift SNO onto prepaired.
+* Get your hardware you plan installing OpenShift SNO onto prepared.
 ** Power cable
 ** Ethernet pugged in for Networking
 ** Keyboard
@@ -100,6 +97,7 @@ Most of the time this is located in your users home folder under "Downloads".
 * Assuming you have your hardware ready and turned off.
 * Next take your Discovery ISO thumb drive and plug it into your machine you will be installing OpenShift onto.
 * Power on your machine, and select the correct button to choose your boot device.
+
 [TIP]
 ====
 Common keys for accessing the Boot Menu are Esc, F2, F10, or F12, depending on the computer or motherboard manufacturer.
@@ -110,12 +108,7 @@ Common keys for accessing the Boot Menu are Esc, F2, F10, or F12, depending on t
 ====
 * Find your USB Drive listed on the boot options and select to boot to it.
 at this point, it should start to boot into the Discovery ISO.
-9. Back to the Browser with Red Hat Console 
+
+10. Back to the Browser with Red Hat Console 
 * After about 5 minutes you should be able to look at your other laptop at Browser that you have the Red Hat Console window up.
 * In the Middle of the Screen there should be a "Waiting for host"
-
-
-
-
-
-
