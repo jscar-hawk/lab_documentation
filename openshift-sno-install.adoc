@@ -117,5 +117,20 @@ Intel NUC is F10
 at this point, it should start to boot into the Discovery ISO.
 
 === Back to the Browser with Red Hat Console 
+==== Host discovery
 * After about 5 minutes you should be able to look at your other laptop at Browser that you have the Red Hat Console window up.
 * In the Middle of the Screen there should be a "Waiting for host"
+* Assuming you have set your Device to have a static IP address in your router, we can move forward.
+* If your hardware is up to the minimum requirements, you should get a "Ready" on the status collum 
+* Click on the machine that shows up
+* Rename your device (In this example I'll call it ser5)
+* Click Next at the bottom left of the window
+
+==== Storage
+* Click on arrow next to the hostname (ser5 in my example)
+* You will want to confirm that you see 2 drives, One for Openshift install, and one for the LVM.
+** I am running this on a machine with 1 NMVe Slot and 1 SATA slot
+** If you see your bootable drive, you do not want to use that for your installer
+
+
+
