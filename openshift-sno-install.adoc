@@ -103,6 +103,8 @@ Most of the time this is located in your users home folder under "Downloads".
 * Assuming you have your hardware ready and turned off.
 * Next take your Discovery ISO thumb drive and plug it into your machine you will be installing OpenShift onto.
 * Power on your machine, and select the correct button to choose your boot device.
+* Find your USB Drive listed on the boot options and select to boot to it.
+at this point, it should start to boot into the Discovery ISO.
 
 [TIP]
 ====
@@ -112,9 +114,6 @@ Lenovo Boot Key is Enter,
 Beelink mini pc is F7,
 Intel NUC is F10
 ====
-
-. Find your USB Drive listed on the boot options and select to boot to it.
-at this point, it should start to boot into the Discovery ISO.
 
 === Back to the Browser with Red Hat Console 
 ==== Host discovery
