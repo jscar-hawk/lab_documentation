@@ -88,7 +88,9 @@ Most of the time this is located in your users home folder under "Downloads".
 * You may be prompted to enter your admin password, then it will take a few minutes to burn it to the device.
 * When it is finished, you can then unplug the thumb drive from the machine you flashed it from.
 
+
 8. Install Openshift from Discorvery Iso
+
 * Get your hardware you plan installing OpenShift SNO onto prepared.
 ** Power cable
 ** Ethernet pugged in for Networking
