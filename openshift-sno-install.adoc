@@ -3,19 +3,21 @@
 
 :REBUILT: Tuesday, July 18, 2023
 
+[float]
 == Introduction
 
 This document is a step-by-step guide on how to set up a home computer homelab using  OPENSHIFT Single Node Installer (SNO). 
 
 This homelab will consist of a OPENSHIFT SNO host that will run a default setup.
 
+[float]
 == Prerequisites
 
 * Desktop or Laptop
 * Internet connectivity
 * Red Hat Account
 
-
+[float]
 == Hardware Requirements
 
 To create a Openshift SNO in you homelab, you will need the following hardware:
@@ -27,15 +29,16 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * A network switch
 * Ethernet cables to connect the computer and the switch.
 
+
 == Openshift SNO Installation
 
-1. Open your browser and go to https://console.redhat.com
+. Open your browser and go to https://console.redhat.com
 
-2. Click on "Red Hat OpenShift" or In the top menu, click Services, Containers, Create Cluster
+. Click on "Red Hat OpenShift" or In the top menu, click Services, Containers, Create Cluster
 
-3. Then click on Datacenter middle tab, Under the Assisted Installer and Click Create Cluster
+. Then click on Datacenter middle tab, Under the Assisted Installer and Click Create Cluster
 
-4. Which will being you to the "Install OpenShift with the Assisted Installer" page Step 1.
+. Which will being you to the "Install OpenShift with the Assisted Installer" page Step 1.
 * Set Your Cluster name, In this example I am using bowcaster.
 * Set your Base Domain, In this example I am using home.arpa. I  am using RFC 8375 https://www.rfc-editor.org/rfc/rfc8375.html
 * Choose what version of Openshift to install. At the time of writing the current version on openshift is 4.13.14
@@ -48,19 +51,19 @@ To create a Openshift SNO in you homelab, you will need the following hardware:
 * Uncheck the Encryption of installation disk
 * Click "Next: at the bottom of the page.
 
-5. "Install OpenShift with the Assisted Installer" page Step 2 Operators
+. "Install OpenShift with the Assisted Installer" page Step 2 Operators
 * If you have a beefy cpu and you want to install the Openshift Virtualization Package
 * Keep the Install Multicluster engine Unchecked (Which is default)
 * Check the box Install Logical Volume Manager Storage
 * Click the Next Button
 
-6. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
-. Click Add Host
-. Provisioning type set to full
-. SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
-. Then click Generate Discovery ISO, This will download an ISO file
+. "Install OpenShift with the Assisted Installer" page Step 3 Host Discovery
+* Click Add Host
+* Provisioning type set to full
+* SSH public key. click the Browse button and navigate to your .ssh directory, select your public ssh key and upload
+* Then click Generate Discovery ISO, This will download an ISO file
 
-7. Burn the Bootable ISO to a USB Drive
+. Burn the Bootable ISO to a USB Drive
 * Plug in a blank usb drive into your machine, then open the disk application
 * On the left side of the window select your USB Thumb Drive
 
@@ -88,9 +91,9 @@ Most of the time this is located in your users home folder under "Downloads".
 * You may be prompted to enter your admin password, then it will take a few minutes to burn it to the device.
 * When it is finished, you can then unplug the thumb drive from the machine you flashed it from.
 
+== Install Openshift from Discovery Iso
 
-8. Install Openshift from Discorvery Iso
-
+=== Hardware prep
 * Get your hardware you plan installing OpenShift SNO onto prepared.
 ** Power cable
 ** Ethernet pugged in for Networking
@@ -104,14 +107,15 @@ Most of the time this is located in your users home folder under "Downloads".
 [TIP]
 ====
 Common keys for accessing the Boot Menu are Esc, F2, F10, or F12, depending on the computer or motherboard manufacturer.
-* Framework Laptop Boot Key is F12
-* Lenovo Boot Key is Enter 
-* Beelink mini pc is F7
-* Intel NUC is F10
+Framework Laptop Boot Key is F12,
+Lenovo Boot Key is Enter,
+Beelink mini pc is F7,
+Intel NUC is F10
 ====
-* Find your USB Drive listed on the boot options and select to boot to it.
+
+. Find your USB Drive listed on the boot options and select to boot to it.
 at this point, it should start to boot into the Discovery ISO.
 
-10. Back to the Browser with Red Hat Console 
+=== Back to the Browser with Red Hat Console 
 * After about 5 minutes you should be able to look at your other laptop at Browser that you have the Red Hat Console window up.
 * In the Middle of the Screen there should be a "Waiting for host"
