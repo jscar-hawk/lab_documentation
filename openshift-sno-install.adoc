@@ -130,6 +130,12 @@ Intel NUC is F10
 * You will want to confirm that you see 2 drives, One for Openshift install, and one for the LVM.
 ** I am running this on a machine with 1 NMVe Slot and 1 SATA slot
 ** If you see your bootable drive, you do not want to use that for your installer
+* Then Click Next
 
+==== Networking
+* you can keep all the default settings here
+* Use the same host discovery SSH
 
+==== Review and create
+* Click Install.
 
