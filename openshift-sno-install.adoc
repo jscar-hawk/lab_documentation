@@ -139,3 +139,23 @@ Intel NUC is F10
 ==== Review and create
 * Click Install.
 
+==== After Installation
+* Download your kubeconfig, "kubeconfig-noingress"
+* Take note of your username (kubeadmin)
+* Copy your password to a saved location (eXaMp-LePaSs-WoRd4-DeM01)
+* you will need to Click the link that say "Not Able to access the web console"
+** OpenShift Web Console troubleshooting
+** Option 1 Add the following records to your DNS server (In your rounter/firewall)
+*** api.bowcaster.home.arpa      A	172.16.10.15
+*** *.apps.bowcaster.home.arpa   A	172.16.10.15
+** Option 2 Update Your local /etc/hosts or /etc/resolv.conf files
+*** 172.16.10.15	api.bowcaster.home.arpa
+*** 172.16.10.15	oauth-openshift.apps.bowcaster.home.arpa
+*** 172.16.10.15	console-openshift-console.apps.bowcaster.home.arpa
+*** 172.16.10.15	grafana-openshift-monitoring.apps.bowcaster.home.arpa
+*** 172.16.10.15	thanos-querier-openshift-monitoring.apps.bowcaster.home.arpa
+*** 172.16.10.15	prometheus-k8s-openshift-monitoring.apps.bowcaster.home.arpa
+*** 172.16.10.15	alertmanager-main-openshift-monitoring.apps.bowcaster.home.arpa
+
+
+
